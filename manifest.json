@@ -1,0 +1,20 @@
+{
+    "manifest_version": 3,
+    "name": "Save Page URL Extension",
+    "version": "1.0",
+    "description": "A simple extension to save and view URLs.",
+    "permissions": ["storage", "activeTab", "tabs"],
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "16": "public/icons/LS_16.png",
+        "48": "public/icons/LS_48.png",
+        "128": "public/icons/LS_128.png"
+      }
+    },
+    "background": {
+      "service_worker": "background.js"
+    },
+    "host_permissions": ["<all_urls>"]
+  }
+  
