@@ -1,5 +1,8 @@
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
+import dotenv from "dotenv"
+
+dotenv.config();
 
 const firebaseConfig = {
   apiKey: "AIzaSyBWuk7g290xp-8aagFYMnqCJfj6aXrCj2M",
