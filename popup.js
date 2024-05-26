@@ -17,21 +17,6 @@ document.getElementById("save-url").addEventListener("click", () => {
   });
 });
 
-document.getElementById("view-urls").addEventListener("click", () => {
-  const savedUrlsDiv = document.getElementById("saved-urls");
-  const urlList = document.getElementById("url-list");
-  urlList.innerHTML = "";
-
-  fetch("http://localhost:3000/api/get-urls")
-    .then((response) => response.json())
-    .then((data) => {
-      const savedUrls = data.urls;
-      savedUrls.forEach((url) => {
-        const listItem = document.createElement("li");
-        listItem.textContent = url;
-        urlList.appendChild(listItem);
-      });
-
-      savedUrlsDiv.style.display = "block";
-    });
+document.getElementById('open-localhost').addEventListener('click', () => {
+  chrome.tabs.create({ url: 'http://localhost:3000/' });
 });
